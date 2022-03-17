@@ -1,4 +1,3 @@
-//Currently there are memory leaks in the code
 //TODO: Please fix all the memory leaks
 //Your code will be tested against Valgrind to ensure there are no memory violations. 
 //The output of the program (what it prints) should not change.
@@ -8,13 +7,13 @@
 
 int main(int argc, char * argv[]){
 
-  int * a = malloc(sizeof(int *));
+  int * a;
   
+  a = (int*)malloc(sizeof(int));
   
    *a = 10;  
   
   printf("%d\n", *a);
-  free(a);
   
   
   a = malloc(sizeof(int *)*3);
@@ -23,5 +22,5 @@ int main(int argc, char * argv[]){
   a[2] = 30;
 
   printf("%d %d %d\n", a[0], a[1], a[2]);
-  return 0;
+  
 }
