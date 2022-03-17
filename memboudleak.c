@@ -8,7 +8,7 @@ int main(int argc, char * argv[]){
 
   int i, *a;
 
-  a = malloc(sizeof(int)*10);
+  a = (int*)malloc(sizeof(int)*10);
 
   for(i=0; i <=10; i++){
     a[i] = i;
