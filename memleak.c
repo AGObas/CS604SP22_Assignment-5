@@ -9,11 +9,12 @@
 int main(int argc, char * argv[]){
 
   int * a = malloc(sizeof(int *));
-  free(a);
   
-  *a = 10;  
+  
+   *a = 10;  
   
   printf("%d\n", *a);
+  free(a);
   
   
   a = malloc(sizeof(int *)*3);
@@ -22,6 +23,5 @@ int main(int argc, char * argv[]){
   a[2] = 30;
 
   printf("%d %d %d\n", a[0], a[1], a[2]);
-  
+  return 0;
 }
-
